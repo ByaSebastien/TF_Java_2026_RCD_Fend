@@ -1,0 +1,9 @@
+@for (link of links(); track link.label) {
+  @if(link.path) {
+    <a [routerLink]="link.path">{{ link.label }}</a>
+  } @else if (link.action) {
+    <button (click)="link.action()">{{ link.label }}</button>
+  }
+}
+
+<button (click)="switchRole()">Switch</button>
