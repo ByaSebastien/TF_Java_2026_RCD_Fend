@@ -19,7 +19,7 @@ export class Nav {
 
   navLinks: Link[] = [
     {
-      label: 'Home',
+      label: 'Product',
       path: '/',
       roles: [UserRole.ANONYMOUS, UserRole.USER, UserRole.ADMIN],
     },

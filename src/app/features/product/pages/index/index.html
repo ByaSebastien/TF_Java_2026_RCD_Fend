@@ -1,0 +1,19 @@
+@if (resource.isLoading()){
+  <p>... Loading</p>
+} @else {
+
+  @for (p of resource.value()?.content; track p.id){
+
+    <div>
+      <p>{{ p.name }}</p>
+      <p>{{ p.price | currency }}</p>
+      <a [routerLink]="`/product/${p.id}`">Details</a>
+    </div>
+  }
+
+  <div>
+    <button (click)="previous()" [disabled]="!hasPrevious">⬅️</button>
+    <button (click)="next()" [disabled]="!hasNext">➡️</button>
+  </div>
+
+}

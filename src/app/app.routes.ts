@@ -3,6 +3,10 @@ import { isAnonymousGuard } from './shared/guards/is-anonymous.guard';
 
 export const routes: Routes = [
   {
+    path: '',
+    loadComponent: () => import('./features/product/pages/index/index').then((m) => m.Index),
+  },
+  {
     path: 'register',
     loadComponent: () => import('./features/auth/pages/register/register').then((m) => m.Register),
     canActivate: [isAnonymousGuard],
