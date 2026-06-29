@@ -1,0 +1,8 @@
+@if(resource.value()){
+<div>
+  <p>{{resource.value()!.id}}</p>
+  <p>{{resource.value()!.name}}</p>
+  <p>{{resource.value()!.description}}</p>
+  <p>{{resource.value()!.price | currency}}</p>
+</div>
+}

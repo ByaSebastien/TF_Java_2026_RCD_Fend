@@ -7,6 +7,10 @@ export const routes: Routes = [
     loadComponent: () => import('./features/product/pages/index/index').then((m) => m.Index),
   },
   {
+    path: 'product/:id',
+    loadComponent: () => import('./features/product/pages/details/details').then((m) => m.Details),
+  },
+  {
     path: 'register',
     loadComponent: () => import('./features/auth/pages/register/register').then((m) => m.Register),
     canActivate: [isAnonymousGuard],
