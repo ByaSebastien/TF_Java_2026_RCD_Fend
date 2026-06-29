@@ -26,6 +26,11 @@ export const navLinks: Link[] = [
     roles: [UserRole.ADMIN],
   },
   {
+    label: 'Register',
+    path: '/register',
+    roles: [UserRole.ANONYMOUS],
+  },
+  {
     label: 'Logout',
     roles: [UserRole.USER, UserRole.ADMIN],
     action: () => {
